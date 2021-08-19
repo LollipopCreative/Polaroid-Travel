@@ -1,0 +1,399 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+#contentall {
+    padding-bottom: 500px;
+}
+
+#alles {
+    position: relative;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+
+
+/* @import url('grid_12-825-55-15.css'); */
+/* @font-face {
+    font-family: 'across_the_roadregular';
+    src: url('../fonts/accros/across_the_road-webfont.woff2') format('woff2'),
+         url('../fonts/accros/across_the_road-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; 
+    }
+    */
+
+
+h1{
+	font-size: 50px;
+	font-weight: lighter;
+	font-style: normal;
+	margin-bottom: 18px;
+    text-align: center;
+    font-family: 'british shorthair';    
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: lighter;
+
+}
+
+a{
+    color: #83c0c1;
+    text-decoration: none;
+}
+
+hr{
+    width:80%;
+    size:2px;
+    color: #83c0c1;
+    margin-top: 20px;
+    margin-bottom:20px;
+    noshade;
+} 
+
+/*Menu*/
+
+#uppersection{
+    background-color: #ededed;
+    height: 50px;
+    width:100%;
+    margin-top:-7px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#uppersection img{
+    float: left;
+    padding: 10px;
+}
+
+#menu {
+    font-size:14px;
+    position:absolute;
+    right: 20px;
+
+}
+
+#menu ul {
+    list-style-type:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;
+}
+
+#menu li.topmenu {
+    float:left;
+}
+
+
+.topmenu a {
+font-family: 'Lato', sans-serif;
+float:left;
+width:120px;
+
+font-weight: 100;
+font-size: 16px;
+color: black;
+text-decoration: none;
+padding: 10px;
+text-transform: none;
+background-color: white;
+}
+
+.topmenu ul{
+    display:none;
+}
+
+.topmenu img{
+    float:left;
+}
+
+.topmenu a, .submenu a{
+padding:15px;
+color:black;
+font-weight:lighter;
+text-decoration:none;
+margin:0;
+}
+
+.submenu a{
+    font-size:12px;
+    width:120px;
+    position:relative;
+    clear:both; /* special IE6 */
+}
+
+#menu a:hover, .topmenu.on a {
+    color: #83c0c1;
+}
+
+.topmenu:hover ul {
+    display:block;
+    z-index:500;
+}
+
+/*MenÃ¼ Ende*/
+
+/* zizat anfang */
+
+.box{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.zitat{ 
+    float:left;
+    margin: 20px;
+}
+
+#oben {
+    margin-bottom: 50px;
+}
+
+#unten{
+    transform: rotate(180deg);
+    margin-top: 50px;
+}
+
+/* zitat ende */
+
+
+/* Bild und Text nebeneinadner */
+
+.zwei {
+    float: left;
+    width:50%;
+    margin-left: 10%;
+    margin-right: 10%;
+   
+}
+
+/* drei boxen nebeneinander */
+
+.drei {
+    border: 2px solid #83c0c1;
+    float:left;
+    width: 25%;
+    height:500px;
+    margin: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* instagram */
+
+#instagram {
+    position:relative;
+    text-align: center;
+}
+
+/* button */
+
+.buttonGross {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: lighter;
+    background-color: #ededed;
+    border:2px solid #83c0c1;
+    padding:10px 200px;
+}
+
+.buttonGross:hover{
+    background-color: #83c0c1;
+    border:2px solid white;
+}
+
+.buttonKlein {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+    background-color: #ededed;
+    border:2px solid #83c0c1;
+    padding:10px;
+    margin:10px;
+}
+
+.buttonKlein:hover{
+    background-color: #83c0c1;
+    border:2px solid white;
+}
+
+
+/* Schau was Kunden sagen */
+
+.kunden{ 
+    background-color:#ededed;
+    width:100%;
+    height:600px;
+    padding:10px;
+    position:relative;
+    text-align: center;
+    z-index: -1;
+}
+
+#polaroids{
+    position: relative;
+    margin: 20px;
+    float: left;
+    width: 20%;
+}
+
+#polaroids:hover{
+    margin-bottom: 50px;
+    border:2px solid brown;
+}
+
+
+
+/* newsletter anmelden */
+
+#newsletter{
+    position:relative;
+    text-align: center;
+}
+
+#formular{
+    border: 2px solid #83c0c1;
+    height:40px;
+    width: 50%;
+    margin:20px;
+}
+
+#formular p{
+    font-size: 32px;
+}
+
+/* Formular Email */
+
+input{
+    border: 2px solid #83c0c1;
+    height:40px;
+    width: 50%;
+    margin:20px;
+}
+
+textarea{
+    border: 2px solid #83c0c1;
+    height:300px;
+    width: 50%;
+    margin:20px;
+}
+/* Ende Formular Email */
+
+/* Seite Reiseziele */
+
+#canvas{
+    border: 1px solid black;
+}
+
+
+/* Kalender */
+
+#kalender{
+    height: 400px;
+    width: 400px;
+    background-color:#83c0c1;
+}
+
+
+/*Footer*/
+
+
+.footer{
+    width: 100%;
+    height: auto;
+    position:absolute;
+    bottom: 0px;
+    left:0px;
+}
+
+.footer_content{
+    background-color: #ededed;
+    width: 100%;
+    height: auto;
+    position:absolute;
+    bottom: 70px;
+    padding: 30px 0px;
+}
+
+.footer_content .section{
+    width: calc(100%/6);
+    height: auto;
+    float: left;
+    
+}
+
+.footer_content .section1{
+    width: calc(100%/6);
+    height: auto;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+.footer .footer_content .section a{
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    color:black;
+    text-decoration: none;
+    padding: 5px;
+    line-height: 1.9;
+    letter-spacing: 1.2px;
+}
+
+.footer .footer_content .section h3{
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    color: #83c0c1;
+    text-decoration: none;
+    padding: 5px;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+}
+
+
+
+.footer .footer_content .section a:hover{
+    color:#83c0c1;
+   }
+i:hover{
+    color:#83c0c1;
+}
+
+.footer .footer_bottom{
+    clear:left;
+    background-color: #83c0c1;
+    position:absolute;
+    bottom: 0px;
+    text-align: center;
+    padding-top: 11px;
+    width: 100%;
+}
+
+.footer .footer_bottom p{
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    color:black;
+    text-decoration: none;
+    padding: 5px;
+    line-height: 1.5;
+    letter-spacing: 1.2px; 
+}
+
+.unten{
+    width: 100%;
+    height: 100px;  
+}
+
+
+/*Footer Ende*/
