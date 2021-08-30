@@ -4,6 +4,14 @@ var kontext = canvas.getContext("2d");
 canvas.width = 1100;
 canvas.height = 600;
 
+var background = new Image();
+background.src = "https://originalmap.de/wp-content/uploads/2019/08/Klassische-Weltkarte_Original-Map.jpg";
+
+// Make sure the image is loaded first otherwise nothing will draw.
+background.onload = function(){
+    ctx.drawImage(background,0,0);   
+}
+
 
 //  - fillRect -Viereck gefüllt
 //  20 und 20 sind die x und y koodinaten
