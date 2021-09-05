@@ -48,21 +48,35 @@ header{
     padding: 0 5%;
 }
 
-#uppersection{
-    background-color: #ededed;
-    height: 50px;
-    width:100%;
-    margin-top:-7px;
-    margin-bottom: 10px;
-    position: relative;
+/*Menu*/
 
+#uppersection{
+  background-color: #ededed;
+  height: 70px;
+  width:100%;
+  margin-top:-7px;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 #uppersection img{
-    float: left;
-    padding: 10px;
+  float: left;
+  padding: 10px;
+  padding-top: 20px;
 }
 
+#login{
+  right:50px;
+  position: absolute;
+  padding-right: 10px;
+  margin-top: 3px;
+  border: 1px solid #83c0c1;
+  border-radius: 10%;
+}
+
+#login:hover{
+  background-color: white;
+}
 
 .logo{
     cursor:pointer;

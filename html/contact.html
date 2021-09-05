@@ -21,10 +21,16 @@
         <!-- Header -->
         <div id="content">
             <div id="uppersection">
-                <img src="../icons/facebook.png" width="30px" height=""> 
-                <img src="../icons/instagram.png" width="30px" height="" > 
-                <img src="../icons/pinterest.png" width="30px" height=""> 
-                <img src="../icons/email.png" width="30px" height="" > 
+                <div>
+                    <img src="../icons/facebook.png" width="30px" height=""> 
+                    <img src="../icons/instagram.png" width="30px" height="" > 
+                    <img src="../icons/pinterest.png" width="30px" height=""> 
+                    <img src="../icons/email.png" width="30px" height="" > 
+                </div>
+                <div id="login">
+                    <img src="../icons/login.png" width="30px" height="">
+                    <p style="float:left; padding-top: 10px;">login</p>
+                </div>
             </div>
             <header>
                 <img src="../images/polaroid_travel.png" width="190" height=""> 
@@ -49,6 +55,9 @@
     
             <!-- Header Ende -->
 
+
+<div id="space" style="height:70px"></div>
+
         <!--Überschrift und Überschrift-->
         <h1>Lass von dir hören!</h1>
 
@@ -61,50 +70,54 @@
 
 
         <!--Kontaktangaben-->
-        <div id="infobox">
+    <div class="box">
+        <div  id="infobox">
             <img src="../icons/facebook.png" width="30px" height="">polaroid travel <p display: block></p>
             <img src="../icons/instagram.png" width="30px" height=""> polaroid.travel <p display: block></p>
             <img src="../icons/email.png" width="30px" height=""> info@polaroid-travel.de<p display: block></p>
             <img src="../icons/facebook.png" width="30px" height=""> 0123456789123<p display: block></p>
             <img src="../icons/facebook.png" width="30px" height=""> Am Karlsberg 49 27568 Bremerhaven <p display: block></p>
-
         </div>
 
-        <!--Kontaktangaben Ende-->
+        <div class="zwei">
+            <img id="wackeln" src="../images/polaroid/polaroid_gründer.jpg" width="230px" height="">
+        </div>
+    </div>
 
-        <hr width="50%"; size="1px"; noshade; color="#83c0c1">
+        <!--Kontaktangaben Ende-->
+<hr width="50%"; size="1px"; noshade; color="#83c0c1">
+        
         
        
-        <!--Frage-->
-        <div class="frage">Du hast noch Fragen? Schreib uns eine Nachricht</div>
        
-        <!--Formular-->
-        <div class="kontaktformular">
+
+
+
+        <div id="formular">
+
+             <!-- Kontaktformular -->
+             <h2> Du hast noch Fragen? Schreib uns gerne!</h2>
+             <form method="post">
+                <input type="text" name="name" placeholder=" Name"> <br>
+                <input type="email" name="email" placeholder=" Mail"> <br>
+                <input type="text" name="betreff" placeholder=" Betreff"> <br>
+                <textarea name="" id="" cols="30" rows="10" name="nachricht" placeholder=" Nachricht"></textarea> <br>
+                <button type="submit" class="buttonGross">Send mail</button>
+    
+            </form>
+
+            <hr width="50%"; size="1px"; noshade; color="#83c0c1">
+
+            <!-- Newsletter -->
+            <h2>Bleib immer auf dem laufenden mit unserem Newsletter</h2>
+    
             <form method="post">
-                    <input  type="text" name="name" placeholder="Name" required />
-                    <input  type="email" name="email" placeholder="E-mail" required />
-                    <textarea cols="50" rows="10" placeholder="Was gibts?" required></textarea>
-
-            </form>    
-
-            <button class="buttonGross">Senden</button>
-
-        </div>    
-
-        <hr width="50%"; size="1px"; noshade; color="#83c0c1">
- 
-        <!--Frage-->
-    <div class="frage">Bleib immer auf dem Laufenden mit unserem Newsletter</div>
-       
-    <!--Formular-->
-        <div class="newsbox">
-            <form method="post">
-             <input  type="text" name="name" placeholder="Name" required />
-             <input  type="email" name="email" placeholder="E-mail" required />
-            
-
-            </form>    
-        </div>    
+                <input type="text" name="" value="" placeholder="Name, Vorname" maxlength="">
+                <input type="text" name="" value="" placeholder="Mail" maxlength="">
+            </form>
+                 <button type="button" class="buttonGross">Sign up</button>
+           
+        </div>
 
 
     </body>

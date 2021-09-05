@@ -38,7 +38,7 @@ h1{
 
 h2{
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: lighter;
 
 }
@@ -61,7 +61,7 @@ hr{
 
 #uppersection{
     background-color: #ededed;
-    height: 50px;
+    height: 70px;
     width:100%;
     margin-top:-7px;
     margin-bottom: 10px;
@@ -71,6 +71,20 @@ hr{
 #uppersection img{
     float: left;
     padding: 10px;
+    padding-top: 20px;
+}
+
+#login{
+    right:50px;
+    position: absolute;
+    padding-right: 10px;
+    margin-top: 3px;
+    border: 1px solid #83c0c1;
+    border-radius: 10%;
+}
+
+#login:hover{
+    background-color: white;
 }
 
 #menu {
@@ -146,6 +160,7 @@ margin:0;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin:auto;
 }
 
 .zitat{ 
@@ -170,9 +185,10 @@ margin:0;
 .zwei {
     float: left;
     width:50%;
-    margin-left: 10%;
-    margin-right: 10%;
-   
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    margin: auto;
+    position: relative;
 }
 
 /* drei boxen nebeneinander */
@@ -240,6 +256,9 @@ margin:0;
     z-index: -1;
 }
 
+
+
+
 #polaroids{
     position: relative;
     margin: 20px;
@@ -247,47 +266,9 @@ margin:0;
     width: 20%;
 }
 
-#polaroids:hover{
-    margin-bottom: 50px;
-    border:2px solid brown;
+img :hover{
+    background-color:red;
 }
-
-
-
-/* newsletter anmelden */
-
-#newsletter{
-    position:relative;
-    text-align: center;
-}
-
-#formular{
-    border: 2px solid #83c0c1;
-    height:40px;
-    width: 50%;
-    margin:20px;
-}
-
-#formular p{
-    font-size: 32px;
-}
-
-/* Formular Email */
-
-input{
-    border: 2px solid #83c0c1;
-    height:40px;
-    width: 50%;
-    margin:20px;
-}
-
-textarea{
-    border: 2px solid #83c0c1;
-    height:300px;
-    width: 50%;
-    margin:20px;
-}
-/* Ende Formular Email */
 
 /* Seite Reiseziele */
 
@@ -417,17 +398,7 @@ i:hover{
     width: 350px;
 }
 
-.frage{
-    background-color: none;
-    position: relative;
-    text-align: left;
-    height: 40px;
-    width: 80%;
-    margin-top: 100px;
-    margin-left: 25%;
-    font-size: 32px;
-    font-weight: 150;
-    }
+/* Infobox Ende */
 
 /*Kontaktformular*/
 
@@ -445,39 +416,15 @@ textarea{
     margin:20px;
 }
 
-.kontaktformular{
+#formular{
     height: fit-content;
     width: fit-content;
     background-color:none;
-    margin-left: 17%;
+    margin:auto;
     text-align: center;
 }
 
-
-/* .buttonGross {
-    font-family: 'Lato', sans-serif;
-    font-size:32px;
-    font-weight: lighter;
-    border:2px solid #83c0c1;
-    padding:10px 200px;
-    width: 50%;
-    height: 60px;
-    text-align: center;
-}
-
-.buttonGross:hover{
-    background-color: #83c0c1;
-    border:2px solid white;
-} */
-
-/*Newsletter*/
-  .newsbox{
-    height: fit-content;
-    width: fit-content;
-    background-color:none;
-    margin-left: 17%;
-  
-  }
+/* Formular ende */
 
 
   /*TeamSeite*/
@@ -520,5 +467,18 @@ textarea{
         z-index: 1;
     }
 
+
+    /* Polaroids Wackeln */
+
+    #wackeln{
+        background-color: red;
+        border:2px solid red;
+    }
+
+    #wackeln:hover{
+        border:2px solid #83c0c1;
+        transform: rotate(-5deg);
+        transition: all 300ms ease-in-out;
+    }
    
 

@@ -86,5 +86,3 @@ kontext.arc(centerX,centerY,80,0,2*Math.PI,true);
 kontext.fill();
 
 // Hallo Lisa
-
-
