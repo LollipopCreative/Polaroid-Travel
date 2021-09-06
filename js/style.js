@@ -85,4 +85,43 @@ kontext.beginPath();
 kontext.arc(centerX,centerY,80,0,2*Math.PI,true);
 kontext.fill();
 
-// Hallo Lisa
+//  Polaroids zum Wackeln bringen
+
+function wackeln(){
+    document.getQuerySelector ('wackeln')
+    .style.transform = 'rotate(10deg)';
+}
+
+
+let ctx = document.getElementById('wackeln')
+ctx.rotate(45 * Math.PI / 180);
+
+
+
+// Bilderkarusell
+
+let picArrays = new Array();
+picArr [0] = tibitische_flagen.jpeg;
+picArr [1] = <p>hallo</p>;
+picArr [2] = thailand_frau.jpeg;
+
+let idx =1;
+let timer;
+
+function tauschPic() {
+    document.getElementById('bilderkarusell').src=picArrays[idx];
+        if (idx==2)
+            inx=0;
+        
+        else
+            idx ++;
+
+        timer =setTimeout ("tauschPic()", 1000);
+}
+
+
+function resetPic(){
+    clearTimeout(timer);
+    document.getElementById('bilderkarusell').src=picArrays[0];
+}
+

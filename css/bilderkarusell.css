@@ -1,0 +1,113 @@
+ /* slideshow */
+
+ body {
+     display:flex;
+     justify-content:center; /*horizontale Ausrichtund*/
+     align-items:center; /*vertikale ausrichtung */
+     height:100vh;
+     margin:0;
+ }
+ 
+ .slideshow{ 
+    background-color: #83c0c1;
+    width: 50vw;
+    height: 50vh;
+    box-shadow:0px 0px 10px gray;
+    position: relative;
+}
+
+.slide{ 
+    position:absolute;
+    top:0; /* sorgt dafür, dasss der Slider in der Slidesho die gleiche Größe hat*/
+    right:0;
+    left:0;
+    bottom: 0;
+    background-color: aqua;
+    overflow: hidden; /* Wenn das bild größer ist als der Div, wirs es abgeschnitten*/
+}
+
+.slide_bild{ 
+    height: 100%;
+    width:100%;
+}
+
+
+.slide_textbereich{ 
+    position:absolute;
+    left:0;
+    right: 0;
+    bottom: 0;
+    top: 70%;
+    background-color:rgba(0,0,0,0.5);
+    color:white;
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 15% 0 15%;
+}
+.slide_h1{ 
+    font-size: 2em;
+    margin: 10px;
+}
+
+.slide_p{ 
+    font-size: 1.4em;
+    margin:0;
+}
+
+.pfeil{ 
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    font-size:50px; /*die pfeile sind ja ganz normale Zeichen aus dem UTF-8 Schrift*/
+    font-weight:bold;
+    color:rgba(225,225,225,0.5);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width:15%;
+    user-select: none; /*das man Pfeil nicht mehr auswählen kann (text)*/
+    cursor: pointer; /*Maus zeigt an, dass man klicken kann*/
+}
+
+
+.pfeil:hover{
+    color: white;
+}
+
+.pfeil_links{ 
+    left: 0;
+}
+
+
+.pfeil_rechts{ 
+    right: 0;
+}
+
+
+.punkte_liste{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    list-style-type: none; /*das die aufzaälungszeichen verschwinden*/
+    font-size: 40px;
+    display: flex;
+    justify-content:center;
+    margin:0;
+    padding:0;
+
+    
+}
+
+.punkte{
+    padding:0 10px;
+    user-select: none;
+    cursor: pointer;
+    color:white;
+    opacity: 0.5;
+}
+
+/* damit der Punkt den wir auswählen 100% Deckkraft hat */
+.aktiv{
+    opacity:1;
+}
