@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
         
-        <link rel="stylesheet" href="../css/bilderkarusell.css">
              
             <!-- Schriften  -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +13,127 @@
         <!-- <link rel="across_the_roadregular" href="../fonts/across/across_the_road-webfont.woff2"> -->
         
 
+
+<style>
+ /* slideshow */
+
+ body {
+     display:flex;
+     justify-content:center; /*horizontale Ausrichtund*/
+     align-items:center; /*vertikale ausrichtung */
+     height:100vh;
+     margin:0;
+ }
+ 
+ .slideshow{ 
+    width: 50vw;
+    height: 50vh;
+    box-shadow:0px 0px 10px gray;
+    position: relative;
+}
+
+.slide{ 
+    position:absolute;
+    top:0; /* sorgt dafür, dasss der Slider in der Slidesho die gleiche Größe hat*/
+    right:0;
+    left:0;
+    bottom: 0;
+    overflow: hidden; /* Wenn das bild größer ist als der Div, wirs es abgeschnitten*/
+    opacity: 0; /*jetzt ohne Deckkraft, damit man in js jedes einzelne Bild wieder aufrufen kann*/
+    transition:opacity 2s; /* damit die bilder Smooth wechseln*/
+}
+
+.slide_bild{ 
+    height: 100%;
+    width:100%;
+}
+
+
+.slide_textbereich{ 
+    position:absolute;
+    left:0;
+    right: 0;
+    bottom: 0;
+    top: 70%;
+    background-color:rgba(0,0,0,0.5);
+    color:white;
+    text-align:center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 15% 0 15%;
+}
+.slide_h1{ 
+    font-size: 2em;
+    margin: 10px;
+}
+
+.slide_p{ 
+    font-size: 1.4em;
+    margin:0;
+}
+
+.pfeil{ 
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    font-size:50px; /*die pfeile sind ja ganz normale Zeichen aus dem UTF-8 Schrift*/
+    font-weight:bold;
+    color:rgba(225,225,225,0.5);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width:15%;
+    user-select: none; /*das man Pfeil nicht mehr auswählen kann (text)*/
+    cursor: pointer; /*Maus zeigt an, dass man klicken kann*/
+}
+
+
+.pfeil:hover{
+    color: white;
+}
+
+.pfeil_links{ 
+    left: 0;
+}
+
+
+.pfeil_rechts{ 
+    right: 0;
+}
+
+
+.punkte_liste{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    list-style-type: none; /*das die aufzaälungszeichen verschwinden*/
+    font-size: 40px;
+    display: flex;
+    justify-content:center;
+    margin:0;
+    padding:0;
+
+    
+}
+
+.punkte{
+    padding:0 10px;
+    user-select: none;
+    cursor: pointer;
+    color:black;
+    opacity: 0.5;
+    transition:opacity 2s; /* damit die bilder Smooth wechseln*/
+}
+
+/* damit der Punkt den wir auswählen 100% Deckkraft hat */
+.aktiv{
+    opacity:1;
+}
+
+
+</style>
+
+
     </head>
 
     <body> 
@@ -21,7 +141,7 @@
         <!-- <div>
             <img id="bilderkarusell" src="../images/tibitische_flagen.jpeg" onMouseOver="tauschPic" onMouseOut="resetPic" width=80%>
         </div> -->
-
+    
         <!-- Slideschow -->
         <div class="slideshow">
             <!-- Bilder -->
@@ -47,19 +167,68 @@
                 </div>
             </div>
             <!-- Pfeile -->
-            <a class="pfeil pfeil_links"><span>&#10094</span></a> <!-- das was im Span steht ist ein Hexadezimalcode. Das ist der Pfeil der in utf-8 drinne ist -->
-            <a class="pfeil pfeil_rechts"><span>&#10095</span></a>
+            <a class="pfeil pfeil_links" onclick="umschalten(-1)"><span>&#10094</span></a> <!-- das was im Span steht ist ein Hexadezimalcode. Das ist der Pfeil der in utf-8 drinne ist -->
+            <a class="pfeil pfeil_rechts" onclick="umschalten(1)"><span>&#10095</span></a>
+            <!-- die funktion umachalten wird in js wieder aufgerufen -->
             <!-- Punkte -->
             <ol class="punkte_liste">
-                <li class="punkte">&#8226;</li>
-                <li class="punkte">&#8226;</li>
-                <li class="punkte">&#8226;</li>
+                <li class="punkte" onclick="springeZuFolie (0)">&#8226;</li>
+                <li class="punkte" onclick="springeZuFolie (1)">&#8226;</li>
+                <li class="punkte" onclick="springeZuFolie (2)">&#8226;</li>
             </ol>
         </div>
+  
+
+        <script>
+        
+        const punkte = document.getElementsByClassName("punkte");
+        punkte[0].classList.add("aktiv");
 
 
+        const slide = document.getElementsByClassName('slide');
+        slide[0].classList.add("aktiv");
 
-        <script language="javascript" type="text/javascript" src="../js/style.js"></script>
+        // Wenn man auf die Pfeile klickt, dass man dann ein Bild weiterschalten kann
+        let aktuellerIndex = 0;
+
+        function umschalten (anzahl){
+          
+            // neuer Index ist immer plus oder minus 1 (ist in html als Anzahl angegeben)
+            let neuerIndex =aktuellerIndex + anzahl;
+
+            // wenn auf der ersten Folie nach links geklickt wird, soll das letzte bild kommen
+            if(neuerIndex < 0){
+                neuerIndex = slide.length -1;
+            }
+
+            // nach der letzten folie soll wieder die erste kommen
+            if(neuerIndex > slide.length -1){
+                neuerIndex = 0;
+            }
+           
+            springeZuFolie(neuerIndex);
+
+        }
+
+        // Auf Punkte Klicken und zur gewünschten folie springen
+
+        function springeZuFolie(neuerIndex){
+            // wenn man klickt, wird das erste Bild und der erste Punkt wieder transaprent (remove aktiv)
+            punkte[aktuellerIndex].classList.remove("aktiv");
+            slide[aktuellerIndex].classList.remove("aktiv");
+            
+            // damit beim klicken punkt und bilder der zeiten Folie eingeblendet werden
+            punkte[neuerIndex].classList.add("aktiv");
+            slide[neuerIndex].classList.add("aktiv");
+
+            // damit js den neuen Indix als Aktuellen speichert und man da weitermachen kann, wo man aufgehört hat
+            aktuellerIndex = neuerIndex;
+        
+        }
+        
+        
+        </script>
+
     </body>
     
 </html>

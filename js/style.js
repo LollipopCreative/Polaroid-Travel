@@ -100,28 +100,43 @@ ctx.rotate(45 * Math.PI / 180);
 
 // Bilderkarusell
 
-let picArrays = new Array();
-picArr [0] = tibitische_flagen.jpeg;
-picArr [1] = <p>hallo</p>;
-picArr [2] = thailand_frau.jpeg;
+// let picArrays = new Array();
+// picArr [0] = tibitische_flagen.jpeg;
+// picArr [1] = <p>hallo</p>;
+// picArr [2] = thailand_frau.jpeg;
 
-let idx =1;
-let timer;
+// let idx =1;
+// let timer;
 
-function tauschPic() {
-    document.getElementById('bilderkarusell').src=picArrays[idx];
-        if (idx==2)
-            inx=0;
+// function tauschPic() {
+//     document.getElementById('bilderkarusell').src=picArrays[idx];
+//         if (idx==2)
+//             inx=0;
         
-        else
-            idx ++;
+//         else
+//             idx ++;
 
-        timer =setTimeout ("tauschPic()", 1000);
-}
+//         timer =setTimeout ("tauschPic()", 1000);
+// }
 
 
-function resetPic(){
-    clearTimeout(timer);
-    document.getElementById('bilderkarusell').src=picArrays[0];
-}
+// function resetPic(){
+//     clearTimeout(timer);
+//     document.getElementById('bilderkarusell').src=picArrays[0];
+// }
+
+
+
+// Slideshow
+
+// class Aktiv hinzufügen, damit die erste Folie und der erste Punkt 100% Opacity haben.
+
+ let punkte = document.getQuerySelector("punkte");
+ punkte[0].classList.add("aktiv");
+
+
+ let slide = document.getElementsByClassName('slide');
+ slide[0].classList.add("aktiv");
+
+ document.getElementById('p').innerHTML= "Hey";
 
