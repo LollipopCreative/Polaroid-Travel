@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+
+  <style>
+      .schrift { 
+          font-family: Arial, sans-serif;
+          font-size:40px;
+          color:pink;
+    }
+
+    #monst{
+        height:100px;
+        width:100px;
+        background-color: #83c0c1;
+    }
+
+    .test{
+        background-color: green;
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+<h1 id="example">JavaScript Kurs für Einsteiger</h1>
+<h1 id="klicken">JavaScript Kurs für Einsteiger</h1>
+<h1>JavaScript lernen einfach gemacht ...</h1>
+<p id="bereich1">erster Absatz im JavaScript-Kurs zur Demonstration</p>
+
+<div id="monst"></div>
+<!-- 
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div> -->
+
+
+<img id ="wackeln" style="transform: rotate(-5deg); margin-top:60px;" 
+onmouseover="mOver(this)" onmouseout="mOut(this)" 
+src="../images/polaroid/polaroid_nepal.png" width="230px" height="">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+
+
+var inhalt = document.getElementById('bereich1');
+document.write(inhalt);
+
+document.getElementsByTagName('h1')[2].style.fontSize='50px';
+document.getElementsByTagName('h1')[2].style.color="green";
+
+document.getElementById('example').classList.add('schrift');
+
+document.getElementById('monst').style.width= "100px"; 
+
+
+
+// Eventlistener
+
+document.addEventListener('mouseover', function myFunction(){
+    document.getElementById("klicken").innerHTML = "Hello World";
+});
+
+document.addEventListener('click', function myFunction(){
+    document.getElementById("monst").classList.add('test')
+});
+
+
+// Moseover
+// function mOver(obj) {
+//   obj.innerHTML = "Thank You"
+//   obj.style.transform = "rotate(5deg)"
+// }
+
+// function mOut(obj) {
+//   obj.innerHTML = "Jaay"
+//   obj.style.transform = "rotate(0deg)"
+// }
+
+
+function mOver(obj) {
+    obj.style.transform ="rotate(20deg)"
+}
+
+function mOut(obj) {
+    obj.style.transform ="rotate(0deg)"
+ 
+}
+
+
+</script>
+
+</body>
+</html>

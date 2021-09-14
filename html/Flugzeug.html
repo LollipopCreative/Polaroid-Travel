@@ -11,58 +11,58 @@ Your browser does not support the canvas element.
 var c=document.getElementById("myCanvas");
 var ctx=c.getContext("2d");
 
-// Flugzeug
-// rumpf
-ctx.fillStyle ='black';
-ctx.fillRect (300,300,500,70);
+// // Flugzeug
+// // rumpf
+// ctx.fillStyle ='black';
+// ctx.fillRect (300,300,500,70);
 
-// Oberer Flügel groß
-ctx.beginPath();
-    ctx.moveTo (500,300);
-    ctx.lineTo (600,300);
-    ctx.lineTo (400,100);
-ctx.closePath();
+// // Oberer Flügel groß
+// ctx.beginPath();
+//     ctx.moveTo (500,300);
+//     ctx.lineTo (600,300);
+//     ctx.lineTo (400,100);
+// ctx.closePath();
 
-ctx.fillStyle='black';
-ctx.fill ();
-
-
-// unterer Flügel groß
-ctx.beginPath();
-    ctx.moveTo (500,370);
-    ctx.lineTo (600,370);
-    ctx.lineTo (400,600);
-ctx.closePath();
-
-ctx.fillStyle='black';
-ctx.fill ();
+// ctx.fillStyle='black';
+// ctx.fill ();
 
 
-// oberer Flügel klein
-ctx.beginPath();
-    ctx.moveTo (290,345);
-    ctx.lineTo (370,345);
-    ctx.lineTo (259,200);
-ctx.closePath();
+// // unterer Flügel groß
+// ctx.beginPath();
+//     ctx.moveTo (500,370);
+//     ctx.lineTo (600,370);
+//     ctx.lineTo (400,600);
+// ctx.closePath();
 
-ctx.fillStyle='black';
-ctx.fill ();
-
-
-// unterer Flügel klein
-ctx.beginPath();
-    ctx.moveTo (290,345);
-    ctx.lineTo (370,345);
-    ctx.lineTo (250,470);
-ctx.closePath();
-
-ctx.fillStyle='black';
-ctx.fill ();
+// ctx.fillStyle='black';
+// ctx.fill ();
 
 
+// // oberer Flügel klein
+// ctx.beginPath();
+//     ctx.moveTo (290,345);
+//     ctx.lineTo (370,345);
+//     ctx.lineTo (259,200);
+// ctx.closePath();
+
+// ctx.fillStyle='black';
+// ctx.fill ();
 
 
-    // Cubic curves example
+// // unterer Flügel klein
+// ctx.beginPath();
+//     ctx.moveTo (290,345);
+//     ctx.lineTo (370,345);
+//     ctx.lineTo (250,470);
+// ctx.closePath();
+
+// ctx.fillStyle='black';
+// ctx.fill ();
+
+
+
+
+    // Herz
     ctx.beginPath();
     ctx.moveTo(75, 40);
     ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
@@ -75,58 +75,71 @@ ctx.fill ();
 
 
 
+// sich bewegender Kreis
 
-// let x =600;
-// let dx= 10;
-// let y = 200;
-// let dy = 10;
-// let radius= 30;
 
-// function animate(){
-//         requestAnimationFrame(animate); //einen Loop erstellt, es wiederholt sich immer wieder
+let x =600;
+let dx= 10;
+let y = 200;
+let dy = 10;
+let radius= 30;
+
+function animate(){
+        requestAnimationFrame(animate); //einen Loop erstellt, es wiederholt sich immer wieder
         
-//         ctx.clearRect(0,0,innerWidth, innerHeight);
+        ctx.clearRect(0,0,innerWidth, innerHeight);
 
-//         ctx.beginPath();
-//         ctx.arc(x,y,radius,0, Math.PI*2, false);
-//         ctx.strokeStyle ='blue';
-//         ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(x,y,radius,0, Math.PI*2, false);
+        ctx.strokeStyle ='blue';
+        ctx.stroke();
         
-//         if (x + 2*radius > innerWidth|| x- radius < 0) {
-//             dx =-dx;
-//         }
+        if (x + 2*radius > innerWidth|| x- radius < 0) {
+            dx =-dx;
+        }
 
-//         if (y +2*radius > innerHeight|| y- radius < 0) {
-//             dy = -dy;
-//         }
-//         x += dx;
-//         y += dy;
-// };
+        if (y +2*radius > innerHeight|| y- radius < 0) {
+            dy = -dy;
+        }
+        x += dx;
+        y += dy;
+};
 
-// animate();
+animate();
 
-// let x =600;
-// let dx= 10;
-// let y = 200;
-// let dy = 10;
-// let radius= 2;
+let x =600;
+let dx= 10;
+let y = 200;
+let dy = 10;
+let radius= 2;
 
-// function animate(){
-//         requestAnimationFrame(animate);
+function animate(){
+        requestAnimationFrame(animate);
 
-//         ctx.beginPath();
-//         ctx.arc(x,y,radius,0, Math.PI*2, false);
-//         ctx.fillStyle ='black';
-//         ctx.fill();
+        ctx.beginPath();
+        ctx.arc(x,y,radius,0, Math.PI*2, false);
+        ctx.fillStyle ='black';
+        ctx.fill();
 
-//         if(x <= 800);
-//         if (y <= 800);
-//         x +=dx;
-//         y += dy;
+        if(x <= 800);
+        if (y <= 800);
+        x +=dx;
+        y += dy;
 
-//     };
+    };
 
-// animate();
+animate();
+
+
+        var elem = document.getElementById('myCanvas');
+        // elem.onClick = alert("hello world");  - displays alert without clicking
+        // elem.onClick = alert('hello world');  - displays alert without clicking
+        // elem.onClick = "alert('hello world!')";  - does nothing, even with clicking
+        // elem.onClick = function() { alert('hello world!'); };  - does nothing
+        // elem.onClick = function() { alert("hello world!"); };  - does nothing
+        var context = elem.getContext('2d');
+        context.fillStyle = '#05EFFF';
+        context.fillRect(0, 0, 150, 100);
 
 
 

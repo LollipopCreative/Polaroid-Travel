@@ -12,6 +12,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
         <!-- <link rel="across_the_roadregular" href="../fonts/across/across_the_road-webfont.woff2"> -->
+
+        <!-- jquerry einbinden -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
 
     </head>
@@ -69,18 +72,25 @@
 
         <div class="kunden">
             <div id="polaroids" style="padding-left:200px">
-                <img id ="wackeln" style="transform: rotate(-5deg); margin-top:60px;" src="../images/polaroid/polaroid_nepal.png" width="230px" height="">
+                <img id ="wackeln"
+                onmouseover="mOver(this)" onmouseout="mOut(this)" 
+                src="../images/polaroid/polaroid_nepal.png" width="230px" height="">
                 <button type="button" class="buttonKlein">mehr Infos</button>
            </div>
             <div id="polaroids">
-                <img id="wackeln" style="transform: rotate(5deg); margin:20px;" src="../images/polaroid/polaroid_malediven.png" width="230px" height="">
+                <img id="wackeln"
+                onmouseover="mOver(this)" onmouseout="mOut(this)" 
+                src="../images/polaroid/polaroid_malediven.png" width="230px" height="">
                 <button type="button" class="buttonKlein">mehr Infos</button>
            </div>
             <div id="polaroids">
-                <img id="wackeln"  margin-top:50px; " src="../images/polaroid/polaroid_thailand.png" width="230px" height="">
+                <img id="wackeln"
+                onmouseover="mOver(this)" onmouseout="mOut(this)" 
+                src="../images/polaroid/polaroid_thailand.png" width="230px" height="">
                 <button type="button" class="buttonKlein">mehr Infos</button>
            </div>
         </div>
+
 
 
     <!-- Wähle deine Zielorte -->
@@ -90,12 +100,15 @@
     <hr>
     <div class="box">
 
-        <canvas id="canvas">
-        Dein Browser unterstützt kein HTML!</canvas>
+        <canvas id="canvas" width="789" height="404"></canvas>
+        <img alt="Verknpfte Datei" id="image1" style="display: none" src="file:///Users/suryalorinaschafer/Desktop/Polaroid%20Travel%20Aktuell/Polaroid-Travel/images/gro%C3%9F/world-map-146505_1280.png" />
 
     </div>
 
-    <script language="javascript" type="text/javascript" src="../js/style.js"></script>
+<script type="text/javascript" src="../js/style.js">
+
+</script>
+   
 </body>
 
 </html>

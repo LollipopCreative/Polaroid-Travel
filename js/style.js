@@ -127,16 +127,74 @@ ctx.rotate(45 * Math.PI / 180);
 
 
 
-// Slideshow
+// start Slideshow
 
-// class Aktiv hinzufügen, damit die erste Folie und der erste Punkt 100% Opacity haben.
+    
+const punkte = document.getElementsByClassName("punkte");
+punkte[0].classList.add("aktiv");
 
- let punkte = document.getQuerySelector("punkte");
- punkte[0].classList.add("aktiv");
+
+const slide = document.getElementsByClassName('slide');
+slide[0].classList.add("aktiv");
+
+// Wenn man auf die Pfeile klickt, dass man dann ein Bild weiterschalten kann
+let aktuellerIndex = 0;
+
+function umschalten (anzahl){
+  
+    // neuer Index ist immer plus oder minus 1 (ist in html als Anzahl angegeben)
+    let neuerIndex =aktuellerIndex + anzahl;
+
+    // wenn auf der ersten Folie nach links geklickt wird, soll das letzte bild kommen
+    if(neuerIndex < 0){
+        neuerIndex = slide.length -1;
+    }
+
+    // nach der letzten folie soll wieder die erste kommen
+    if(neuerIndex > slide.length -1){
+        neuerIndex = 0;
+    }
+   
+    springeZuFolie(neuerIndex);
+
+}
+
+// Auf Punkte Klicken und zur gewünschten folie springen
+
+function springeZuFolie(neuerIndex){
+    // wenn man klickt, wird das erste Bild und der erste Punkt wieder transaprent (remove aktiv)
+    punkte[aktuellerIndex].classList.remove("aktiv");
+    slide[aktuellerIndex].classList.remove("aktiv");
+    
+    // damit beim klicken punkt und bilder der zeiten Folie eingeblendet werden
+    punkte[neuerIndex].classList.add("aktiv");
+    slide[neuerIndex].classList.add("aktiv");
+
+    // damit js den neuen Indix als Aktuellen speichert und man da weitermachen kann, wo man aufgehört hat
+    aktuellerIndex = neuerIndex;
+
+}
+
+// Ende Slideshow
 
 
- let slide = document.getElementsByClassName('slide');
- slide[0].classList.add("aktiv");
 
- document.getElementById('p').innerHTML= "Hey";
+
+ // wackelnde bilder
+    
+ var a = Math.random() * 10 - 5;
+ function mOver(obj) {
+     obj.style.transform ="rotate(10deg)"
+     obj.style.transition =" 0.5s linear";
+ }
+
+ function mOut(obj) {
+     obj.style.transform ="rotate(0deg)"
+
+ }
+
+
+
+//  Wähle deine Zielorte aus
+
 
