@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Popup</title>
+
+    <style>
+        *{
+            margin:0;
+        }
+
+        body{
+            font-family: Arial,sans-serif;
+        }
+
+        p{
+            margin:24px 0;
+        }
+
+        .wrapper{
+            padding:32px;
+        }
+
+        .cookie_container{
+            position: fixed;
+            bottom:-150px;
+            right: 0;
+            left: 0;
+            background: #83c0c1;
+            color: white;
+            padding:0 32px;
+            transition: 400ms;
+            box-shadow: 0 -2px 16px rgba(0,0,0,0.4);
+        }
+
+        .cookie_container.active{
+            bottom :0;
+        }
+
+        .cookie_button{
+            border:0; 
+            border-radius:16px;
+            padding: 12px 48px;
+            margin-bottom: 10px;
+            font: size 18px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="wrapper">
+    <h1>Hallo</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+
+    </div>
+
+    <div class="cookie_container">
+        <p>
+            We use Cookkies on the Website
+        </p>
+        <button class="cookie_button">
+            Okay
+        </button>
+    </div>
+
+
+
+    <script>
+        const cookieContainer = document.querySelector(".cookie_container");
+        const cookieButton = document.querySelector(".cookie_button");
+
+
+        cookieButton.addEventListener("click", () => {
+            cookieContainer.classList.remove("active");
+            // wenn man Seite neu läd, soll das Cookie Banner nicht nochmal aufpoppen
+            // erstmal in den Localstorrage einen wert speichern
+            localStorage.setItem("cookieBannerDisplayes", "true");
+        });
+
+        setTimeout(() =>{
+            // wenn der wert CookieBannerDisplayes nicht gepeichert ist, dann soll das Banner gezeigt werden
+            if(!localStorage.getItem("cookieBannerDisplayes"))
+            cookieContainer.classList.add("active");
+        }, 2000);
+
+    </script>
+</body>
+</html>

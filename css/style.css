@@ -275,14 +275,9 @@ margin:0;
 
 
 #wackeln{
-    border:2px solid pink;
-    z-index: 1;
-}
-
-#wackeln:hover{
     border:2px solid #83c0c1;
-    /* -webkit-transform: rotate( random(-5, 5)deg); */
-    transition: all 300ms ease-in-out;
+    border-radius: 15px;
+    z-index: 1;
 }
 
 /* Seite Reiseziele */
@@ -602,12 +597,36 @@ textarea{
 /* slideshow Ende */
 
 
-/* Monst */
-
-#monst{
-    height:100px;
-    width:100px;
-    background-color: #83c0c1;
+/* Cookiebanner */
+p{
+    margin:24px 0;
 }
 
-   
+.wrapper{
+    padding:32px;
+}
+
+.cookie_container{
+    position: fixed;
+    bottom:-150px;
+    right: 0;
+    left: 0;
+    background: #83c0c1;
+    color: white;
+    padding:0 32px;
+    transition: 400ms;
+    box-shadow: 0 -2px 16px rgba(0,0,0,0.4);
+}
+
+.cookie_container.active{
+    bottom :0;
+}
+
+.cookie_button{
+    border:0; 
+    border-radius:16px;
+    padding: 12px 48px;
+    margin-bottom: 10px;
+    font: size 18px;
+    cursor: pointer;
+}

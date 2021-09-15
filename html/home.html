@@ -132,6 +132,8 @@
         
     <hr style="clear:left;">
 
+    <!-- Ziatat Ende -->
+    <!-- Text  mit Polaroid daneben -->
 
     <div class="box">
         <div class="zwei" style="margin-left: 10%;">
@@ -140,12 +142,17 @@
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit </p>
         </div>
         <div class ="zwei" style="margin-right: 10%;">
-            <img style="transform: rotate(-5deg); margin: 20px;" src="../images/run_the_world_start.png" width="250px" height="">
+            <img id="wackeln"
+            onmouseover="mOver(this)" onmouseout="mOut(this)" 
+            src="../images/run_the_world_start.png" width="250px" height="">
         </div>
     </div>
-
+<!-- Text mit Polaroid daneben ende -->
+<!-- Bild mit Bergen -->
     <img src="../images/berge.jpeg" width="100%" style="margin-top:30px;">
     <hr>
+
+<!-- drei Boxen -->
         <div class="box">
             <div class="drei">
                 <h2>Ziele</h2>
@@ -158,6 +165,7 @@
             </div>
         </div>
     <hr>
+<!-- drei Boxen ende -->
 <!-- Folge uns auf Instagram -->
     <div id="instagram">
         <h2>Folge uns auf Instagram!</h2> <br>
@@ -270,63 +278,24 @@
             
     </div>
 
+    <div class="cookie_container">
+        <p>
+            We use Cookies on this Website
+        </p>
+        <button class="cookie_button">
+            Okay
+        </button>
+    </div>
+
 
 
 </div>
 </div>
         
 
-<script>
-
-// start Slideshow
-
-    
-const punkte = document.getElementsByClassName("punkte");
-punkte[0].classList.add("aktiv");
+<script type="text/javascript" src="../js/style.js">
 
 
-const slide = document.getElementsByClassName('slide');
-slide[0].classList.add("aktiv");
-
-// Wenn man auf die Pfeile klickt, dass man dann ein Bild weiterschalten kann
-let aktuellerIndex = 0;
-
-function umschalten (anzahl){
-  
-    // neuer Index ist immer plus oder minus 1 (ist in html als Anzahl angegeben)
-    let neuerIndex =aktuellerIndex + anzahl;
-
-    // wenn auf der ersten Folie nach links geklickt wird, soll das letzte bild kommen
-    if(neuerIndex < 0){
-        neuerIndex = slide.length -1;
-    }
-
-    // nach der letzten folie soll wieder die erste kommen
-    if(neuerIndex > slide.length -1){
-        neuerIndex = 0;
-    }
-   
-    springeZuFolie(neuerIndex);
-
-}
-
-// Auf Punkte Klicken und zur gewünschten folie springen
-
-function springeZuFolie(neuerIndex){
-    // wenn man klickt, wird das erste Bild und der erste Punkt wieder transaprent (remove aktiv)
-    punkte[aktuellerIndex].classList.remove("aktiv");
-    slide[aktuellerIndex].classList.remove("aktiv");
-    
-    // damit beim klicken punkt und bilder der zeiten Folie eingeblendet werden
-    punkte[neuerIndex].classList.add("aktiv");
-    slide[neuerIndex].classList.add("aktiv");
-
-    // damit js den neuen Indix als Aktuellen speichert und man da weitermachen kann, wo man aufgehört hat
-    aktuellerIndex = neuerIndex;
-
-}
-
-// Ende Slideshow
     </script>
 
 
