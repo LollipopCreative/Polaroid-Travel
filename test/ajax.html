@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.hide-me {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(.75);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.4em;
+  font-weight: normal;
+  display: inline-block;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  padding: 50px 10%;
+}
+
+button {
+  background-color: #046380;
+  color: #FFF;
+  border: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 2px 2px 0 #034154;
+  margin-bottom: 10px;
+  margin-left: 18px;
+  transition: opacity .4s ease-out, transform .4s ease-out, visibility .4s ease-out;
+  position: relative;
+  top: -10px;
+}
+
+button:hover {
+  background-color: #034F66;
+}
+
+button:active {
+  background-color: #034154;
+  box-shadow: none;
+  position: relative;
+  top: -8px;
+  left: 2px;
+}
+
+p {
+  padding: 4px 0 2px 8px;
+  line-height: 1.7;
+  border-bottom: 1px dotted #DDD;
+  list-style: none;
+  margin: 0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JSON and AJAY</h1>
+        <button id="btn">klick 3 mal</button>
+    </header>
+
+    <div id="animal-info"></div>
+
+    <script>
+        var pageCounter = 1;
+        var animalContainer = document.getElementById("animal-info");
+        var btn = document.getElementById("btn");
+        
+        btn.addEventListener("click", function(){
+            // Wenn man auf den Button klickt, dann wrd der Inhalt aus der JSON Datei geladen
+            var ourRequest = new XMLHttpRequest(); //muss man dazu schreiben
+            ourRequest.open("GET","https://learnwebcode.github.io/json-example/animals-" + pageCounter + ".json");
+            // page Conter verändert die URL jedes mal
+            //  so wird neuer Inhalt geladen
+           // Wenn der Inhalt des Links geladen ist, soll Der Inhalt in der neuen Varialbeln gespeichtert werden
+           ourRequest.onload = function(){
+            var ourData = JSON.parse(ourRequest.responseText);
+            // JSON.Parse macht klar, das es sich um ein JSON Dokument handelt
+            // Sonst wird einfach nur gedacht, es wäre ein Text
+            renderHTML(ourData);
+            // Der Inhalt von Render HTML soll innerHTML geschrieben werden     
+        };
+
+        // Falls Ajax bei Irgendwem nich funktioniert, wird eine Error Meldung gegeben
+        ourRequest.onerror = function(){
+            console.log("Connection error")
+        };
+        // Sende den Inhalt in die Console
+        ourRequest.send();
+        // nachdem der Erste Link in die Seite geladen wurde, wird der Counter erhöht
+        // um nächtes Mal nächten Link reinzuladen
+        pageCounter++;
+        // durch die If Bedingung verschwindet der Button nach drei mal Klicken
+         if (pageCounter>3){
+            btn.classList.add ("hide-me");
+        }
+
+        });
+
+        // diese Funktion soll Test in das HTML Dokument reinschreiben
+        // in das div Element mit der ID animal-info
+        function renderHTML (data){
+            var htmlString = "";
+
+            // durch die For schleife werden alle Objekte im Array nacheinander aufgerufen
+            for (i=0; i < data.length; i++) {
+                // Das ist der String, der im HTML dokument reingeschrieben wird
+                // += damit alle Objekte des Arrays
+                htmlString += "<p>" + data[i].name + " is a " + data[i].species + " that likes to eat "
+                    
+                    for(ii = 0; ii<data[i].foods.likes.length; ii++){
+                        htmlString += data[i].foods.likes[ii];
+                    }
+
+                    htmlString += "an dont likes to eat"
+                    for(ii = 0; ii<data[i].foods.dislikes.length; ii++){
+                        htmlString += data[i].foods.dislikes[ii];
+                    }
+
+                    htmlString += ".</p>"
+
+            }
+            animalContainer.insertAdjacentHTML('beforeend',htmlString);
+
+        }
+    </script>
+</body>
+</html>
