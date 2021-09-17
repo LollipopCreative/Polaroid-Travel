@@ -85,4 +85,50 @@ function springeZuFolie(neuerIndex){
     aktuellerIndex = neuerIndex;
 
 }
+
+
+
 // Ende Slideshow
+
+
+// Start Ajax
+
+// ReiseZiiele
+var ReiseInfoDiv = document.getElementById("reise_info");
+var btn = document.getElementById("btn");
+var pageCounter =1;
+
+btn.addEventListener("click", function(){
+    var ourRequest =new XMLHttpRequest();
+    ourRequest.open('GET', "../json/"+pageCounter+".json");
+    ourRequest.onload =function(){
+        var meineDaten = JSON.parse(ourRequest.responseText);
+        renderHTML(meineDaten);
+    };
+
+ourRequest.send();
+
+pageCounter++;
+// durch die If Bedingung verschwindet der Button nach drei mal Klicken
+ if (pageCounter>3){
+    btn.classList.add ("hide-me");
+}
+
+});
+
+function renderHTML (data){
+    var htmlString = "";
+
+    // durch die For schleife werden alle Objekte im Array nacheinander aufgerufen
+    for (i=0; i < data.length; i++) {
+        // Das ist der String, der im HTML dokument reingeschrieben wird
+        // += damit alle Objekte des Arrays
+        htmlString += "<p>" + data[i].Ort + " ist ein schöner Ort mit vielen " + data[i].Sehenswürdigkeiten + 
+        ". Dort kann man gut " + data[i].toDo + ".</p>"
+
+    }
+    ReiseInfoDiv.insertAdjacentHTML('beforeend',htmlString);
+
+}
+
+// Reiseziel Ende
