@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/style_lisa.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+    
+
+
+      <div class="hintergrund" id="mo">
+        <div class="inhalt">
+             <div class="close" id="close" onclick="closeMode()">+</div>
+                  <img src="Platzhalter"; alt="logo"; width="100px"; height="100px">
+   
+                  <p>Thanks for your message. We´ll get back to you as soon as possible!<p>
+                  <p> Have a great day!</p>
+             </div>
+   
+       </div>
+
+
+
+       <form action="">
+
+        <input type="text"  placeholder="Name" required>
+        <input type="text"  placeholder="Nachname" required>
+        <input type="text"  placeholder="E-Mail" required>
+        <textarea rows="6" cols="40" placeholder="Hit us up" name="text" required></textarea>
+      
+        <a href="#Seintenanfang"; id="button"; class="buttonGross"; onclick="openModal()">Senden</a>
+      
+      </form>
+   
+  
+
+   <script>
+
+
+
+
+      function openModal(){
+        document.getElementById('mo').style.display="flex";
+      
+      }
+      
+      function closeMode(){
+        document.getElementById('mo').style.display="none";
+      }
+
+    </script>
+    
+
+</body> 
+</html>

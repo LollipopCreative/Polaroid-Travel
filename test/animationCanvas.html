@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #canvas {border: 1px solid black}
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <script>
+        
+        const canvas = document.getElementById("canvas")
+        const ctx = canvas.getContext("2d")
+
+        let playAnim = false;
+
+        // // wenn t auf 1 gesetzt ist, ist die animation fertig (Ball ist am Ende der Baszier Kurve angekommen)
+        let ball = {x:30, y:30, speed:0.1, t:0, radius:20};
+
+        // diese Punkt beschreiben die Bezier Curves
+        // der erste Punk ist der dtartpunkt wo der Ball gerade ist (deshalb nicht genau definiert)
+        // der zweite, dritte und vierte Punk sind die Coordinaten der Kurve
+
+        // let points =[
+        //     {x:ball.x, y:ball.y},
+        //     {x:70,y:200},
+        //     {x:125,y:295},
+        //     {x:350,y:350},
+        // ]
+
+        function drawBall() {
+            ctx.fillStyle="black";
+            ctx.beginPath();
+            ctx.arc(ball.x, ball.y,ball.radius,0,Math.PI*2,false);
+            ctx.fill();
+        
+            
+        }
+
+        // function moveBallInBezierCurve (){
+        //     let[p0,p1,p2,p3] = points;
+        //     let cx = 3* (p1.x-p0.x);
+        //     let bx = 3* (p2.x-p1.x)-cx;
+        //     let ax = 3* p3.x-p0.x -cx-bx;
+
+        //     let cx = 3* (p1.y-p0.y);
+        //     let bx = 3* (p2.y-p1.y)-cy;
+        //     let ax = 3* p3.y-p0.y -cy-by;
+
+        //     // soll immer inkrementiert werden, damit sich ball bewegt
+        //     // siehe zeile 24
+        //     let t =ball.t;
+
+        //     // increment t Wert mit dem Speed Wert
+        //     ball.t += ball.speed;
+
+        //     // neue x und y loordinaten von dem Ball berechnen werlet 
+        //     xt = ax*(t*t*t)+bx(t*t)+ cx*t+p0.x;
+        //     yt = ay*(t*t*t)+by(t*t)+ cx*t+p0.y;
+
+        //     // damit t nicht immer und immer weiter inkrementeirt werden kann
+        //     if (ball.t>1){
+        //         ball.t =1;
+        //     }
+
+        //     // Ball in die neue x un y Position zeichen
+        //     ball.x =xt;
+        //     ball.y =yt;
+        //     drawBall();
+
+        // };
+
+        function animate(){
+            requestAnimationFrame(animate);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // Ball verschwindet wenn geklickt
+            if(!playAnim){
+                drawBall();
+            }
+            // der Ball folgt dem Pfad
+            else{
+                // moveBallInBezierCurve();
+
+            }
+        }
+
+        // Funktion aufrufen
+        animate();
+
+        // es soll nur was passieren, wenn man auf das Canvas feld klickt
+        // playAnim wird auf true gesetzt
+        canvas.addEventListener("click",()=>{
+            playAnim = true;
+        });
+   
+
+    </script>
+</body>
+</html>

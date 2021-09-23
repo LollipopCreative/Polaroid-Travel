@@ -89,11 +89,21 @@
         <!--Kontaktangaben Ende-->
 <hr width="50%"; size="1px"; noshade; color="#83c0c1">
         
+
+
+        <!-- Popup -->
+    <div class="hintergrund" id="mo">
+        <div class="inhalt">
+            <div class="close" id="close" onclick="closeMode()">+</div>
+                <img src="Platzhalter"; alt="logo"; width="100px"; height="100px">
+
+                <p>Thanks for your message. We´ll get back to you as soon as possible!<p>
+                <p> Have a great day!</p>
+            </div>
+
+    </div>
+    </div>   
         
-       
-       
-
-
 
         <div id="formular">
 
@@ -104,7 +114,8 @@
                 <input type="email" name="email" placeholder=" Mail"> <br>
                 <input type="text" name="betreff" placeholder=" Betreff"> <br>
                 <textarea name="" id="" cols="30" rows="10" name="nachricht" placeholder=" Nachricht"></textarea> <br>
-                <button type="submit" class="buttonGross">Send mail</button>
+                <!-- Button für Popup -->
+                <a href="#Seintenanfang"; id="button"; class="buttonGross"; onclick="openModal()">Senden</a>
     
             </form>
 
@@ -123,5 +134,6 @@
 
 
     <script type="text/javascript" src="../js/style.js"></script>
+
     </body>
     </html>
