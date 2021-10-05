@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Schriften  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- social media Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+</head>
+
+<body>
+    <div id="alles">
+        <div id="contentall">
+
+            <!-- Header -->
+
+            <div id="uppersection">
+                <div>
+                    <img src="../images/icons/facebook.png" width="30px">
+                    <img src="../images/icons/instagram.png" width="30px">
+                    <img src="../images/icons/pinterest.png" width="30px">
+                    <img src="../images/icons/email.png" width="30px">
+                </div>
+            </div>
+
+
+
+            <header>
+                <img style="float:left;" src="../images/polaroid_travel.png" width="190px">
+                <div id="menu">
+                    <ul>
+                        <li class="topmenu">
+                            <a style="color: #83c0c1" href="../index.html">Home</a>
+
+                        </li>
+                        <li class="topmenu">
+                            <a href="reiseziele.html">Reiseziele</a>
+                            <ul>
+                                <li class="submenu"><a href="karibik.html">Karibik</a></li>
+                                <li class="submenu"><a href="madagaska.html">Madagaska</a></li>
+                                <li class="submenu"><a href="nepal.html">Nepal</a></li>
+                            </ul>
+                        </li>
+                        <li class="topmenu">
+                            <a href="buchung.html">Buchung</a>
+                        </li>
+                        <li class="topmenu">
+                            <a href="team.html">Team</a>
+                        </li>
+                        <li class="topmenu">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="space" style="height:70px"></div>
+
+            <!-- Header Ende -->
+
+            <h1>Run the World</h1>
+
+            <hr>
+
+            <!-- Slideshow -->
+            <div id="startbild">
+                <div class="slideshow">
+                    <!-- Bilder -->
+                    <div class="slide">
+                        <img class="slide_bild" src="../images/bilderkarousell/titelbeach.jpeg" alt="Stand">
+                        <div class="slide_textbereich">
+                            <h1 class="slide_h1"> Malediven</h1>
+                            <p class="slide_p">Das schönste Reiseziel</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img class="slide_bild" src="../images/bilderkarousell/thailand_frau.jpeg" alt="Stand">
+                        <div class="slide_textbereich">
+                            <h1 class="slide_h1"> Thailand</h1>
+                            <p class="slide_p">Das schönste Reiseziel</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img class="slide_bild" src="../images/bilderkarousell/tibitische_flagen.jpeg" alt="Stand">
+                        <div class="slide_textbereich">
+                            <h1 class="slide_h1"> Nepal</h1>
+                            <p class="slide_p">Das schönste Reiseziel</p>
+                        </div>
+                    </div>
+                    <!-- Pfeile -->
+                    <a class="pfeil pfeil_links" onclick="umschalten(-1)"><span>&#10094</span></a>
+                    <!-- das was im Span steht ist ein Hexadezimalcode. Das ist der Pfeil der in utf-8 drinne ist -->
+                    <a class="pfeil pfeil_rechts" onclick="umschalten(1)"><span>&#10095</span></a>
+                    <!-- die funktion umachalten wird in js wieder aufgerufen -->
+                    <!-- Punkte -->
+                    <ol class="punkte_liste">
+                        <li class="punkte" onclick="springeZuFolie (0)">&#8226;</li>
+                        <li class="punkte" onclick="springeZuFolie (1)">&#8226;</li>
+                        <li class="punkte" onclick="springeZuFolie (2)">&#8226;</li>
+                    </ol>
+                </div>
+
+            </div>
+
+
+
+            <!-- Zitat -->
+
+            <hr>
+            <div class="box">
+                <div class="zitat">
+                    <img id="oben" src="../images/icons/anführungszeichen.png" width="80px" height="">
+                </div>
+                <div class="zitat">
+                    <h2>Live with no excuses,<br>
+                        and travel with no regrets!
+                    </h2>
+                </div>
+                <div class="zitat">
+                    <img id="unten" src="../images/icons/anführungszeichen.png" width="80px" height="">
+                </div>
+            </div>
+
+            <hr style="clear:left;">
+
+            <!-- Ziatat Ende -->
+            <!-- Text  mit Polaroid daneben -->
+
+            <div class="box">
+                <div class="zwei" style="margin-left: 10%;">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                        ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+                        tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
+                        iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
+                        feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+                        luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                        Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                        nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                        nostrud exerci tation ullamcorper suscipit </p>
+                </div>
+                <div class="zwei" style="margin-right: 10%;">
+                    <img id="wackeln" onmouseover="mOver(this)" onmouseout="mOut(this)"
+                        src="../images/polaroid/polaroid_madagaska.png" width="250px" height="">
+                </div>
+            </div>
+            <!-- Text mit Polaroid daneben ende -->
+            <!-- Bild mit Bergen -->
+            <img src="../images/breite_bilder/berge.jpeg" width="100%" style="margin-top:30px;">
+            <hr>
+
+            <!-- drei Boxen -->
+            <div class="box">
+                <div class="drei" style="margin:0 70px">
+                    <h2>Bilder</h2>
+                    <img id="mittig" onmouseover="mOver(this)" onmouseout="mOut(this)"
+                        src="../images/polaroid/run_the_world_start.png" width="" height="350px">
+                </div>
+                <div class="drei">
+                    <header>
+                        <h2>Reiseziele</h2>
+                        <button class="buttonKlein" id="btn">klick mich drei Mal</button>
+                    </header>
+
+                    <div id="reise_info"></div>
+
+                </div>
+                <div class="drei">
+                    <h2>Kontakt</h2>
+                    <div id="infobox">
+                        <img src="../images/icons/facebook.png" width="30px" height="">polaroid travel <p display: block></p>
+                        <img src="../images/icons/instagram.png" width="30px" height=""> polaroid.travel <p display: block></p>
+                        <img src="../images/icons/email.png" width="30px" height=""> info@polaroid-travel.de<p display: block>
+                        </p>
+                        <img src="../images/icons/facebook.png" width="30px" height=""> 0123456789123<p display: block></p>
+                        <img src="../images/icons/facebook.png" width="30px" height=""> Am Karlsberg 49 27568 Bremerhaven <p
+                            display: block></p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!-- drei Boxen ende -->
+            <!-- Folge uns auf Instagram -->
+            <div id="instagram">
+                <h2>Folge uns auf Instagram!</h2> <br>
+
+                <a href="https://www.instagram.com/" class="buttonGross">Abbonieren</a>
+
+                <p>Zeige uns deine Reisebilder und Tagge uns</p>
+
+                <a style="font-size:22px;" href="https://www.instagram.com/">@Unsername</a>
+            </div>
+            <hr>
+
+            <!-- Start Schau was Kunden Sagen -->
+            <div class="kunden">
+                <h2>Schau was Kunden sagen:</h2>
+
+                <div id="polaroids">
+                    <img id="wackeln" onmouseover="mOver(this)" onmouseout="mOut(this)" src="../images/kunden/laura.png"
+                        width="180px" height="">
+                    <P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                        ut laoreet dolore magna </P>
+                </div>
+                <div id="polaroids">
+                    <img id="wackeln" onmouseover="mOver(this)" onmouseout="mOut(this)" src="../images/kunden/tom.png"
+                        width="180px" height="">
+                    <P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                        ut laoreet dolore magna </P>
+                </div>
+                <div id="polaroids">
+                    <img id="wackeln" onmouseover="mOver(this)" onmouseout="mOut(this)"
+                        src="../images/kunden/toni_alex.png" width="180px" height="">
+                    <P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                        ut laoreet dolore magna </P>
+                </div>
+                <div id="polaroids">
+                    <img id="wackeln" onmouseover="mOver(this)" onmouseout="mOut(this)"
+                        src="../images/kunden/sophie.png" width="180px" height="">
+                    <P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                        ut laoreet dolore magna </P>
+                </div>
+            </div>
+
+            <hr style="clear:left;">
+
+
+
+
+            <!-- Footer Start -->
+
+            <div class="footer">
+                <div class="footer_content">
+                    <div class="section">
+                        <p></p>
+                    </div>
+                    <div class="section">
+                        <h3> Zur Buchung</h3>
+                        <button type="button" class="buttonKlein">let's book!</button>
+
+                    </div>
+                    <div class="section">
+                        <h3>Links</h3>
+                        <i class="fas fa-check" style="color: #83c0c1"></i>
+                        <a href="../index.html">Home</a> <br>
+                        <i class="fas fa-check" style="color: #83c0c1"></i>
+                        <a href="team.html">Team</a> <br>
+                        <i class="fas fa-check" style="color: #83c0c1"></i>
+                        <a href="impressum.html">Impressum</a> <br>
+                        <i class="fas fa-check" style="color: #83c0c1"></i>
+                        <a href="datenschutz.html">Datenschutz</a> <br>
+                    </div>
+                    <div class="section">
+                        <h3>Kontakt</h3>
+                        <i class="fab fa-facebook-f" style="color: #83c0c1"></i>
+                        <a href="#">polaroid_travel</a><br>
+                        <i class="fab fa-instagram" style="color: #83c0c1"></i>
+                        <a href="#">polaroid_travel</a> <br>
+                        <i class="fas fa-phone" style="color: #83c0c1"></i>
+                        <a href="#">015255426826</a> <br>
+                        <i class="far fa-envelope" style="color: #83c0c1"></i>
+                        <a href="#">kontakt@plaroid-travel.de</a> <br>
+                    </div>
+
+                    <div class="section">
+                        <h2 style="color: #83c0c1">Polaroid Travel</h2>
+                    </div>
+                    <div class="section">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="unten">
+                    <div class="footer_bottom">
+                        <p>&copy; Polaroid Travel - Designed by Lorina und Lisa</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Cookiepopup -->
+            <div class="cookie_container">
+                <p>
+                    We use Cookies on this Website
+                </p>
+                <button class="cookie_button">
+                    Okay
+                </button>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- Style für alle Seiten -->
+    <script type="text/javascript" src="../js/style.js"></script>
+
+    <!-- Style nur für die Home Seite -->
+    <!-- Bildergallerie und Ajax -->
+    <script type="text/javascript" src="../js/style_home.js"></script>
+
+
+</body>
+
+</html>

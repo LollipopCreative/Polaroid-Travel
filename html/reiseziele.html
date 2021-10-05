@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        
-        <link rel="stylesheet" href="../css/style.css">
-             
-            <!-- Schriften  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-        <!-- <link rel="across_the_roadregular" href="../fonts/across/across_the_road-webfont.woff2"> -->
 
-        <!-- jquerry einbinden -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
 
-    </head>
+    <link rel="stylesheet" href="../css/style.css">
 
-    <body> 
+    <!-- Schriften  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 
-       <!-- Header -->
-   
+    <!-- social media Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <!-- jquerry einbinden -->
+    <script src="https: //ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
     <div id="uppersection">
         <div>
-            <img src="../icons/facebook.png" width="30px" height=""> 
-            <img src="../icons/instagram.png" width="30px" height="" > 
-            <img src="../icons/pinterest.png" width="30px" height=""> 
-            <img src="../icons/email.png" width="30px" height="" > 
-        </div>
-        <div id="login">
-            <img src="../icons/login.png" width="30px" height="">
-            <p style="float:left; padding-top: 10px;">login</p>
+            <img src="../images/icons/facebook.png" width="30px" height="">
+            <img src="../images/icons/instagram.png" width="30px" height="">
+            <img src="../images/icons/pinterest.png" width="30px" height="">
+            <img src="../images/icons/email.png" width="30px" height="">
         </div>
     </div>
     <header>
-       <img style="float:left;" src="../images/polaroid_travel.png" width="190px">
+        <img style="float:left;" src="../images/polaroid_travel.png" width="190px">
         <div id="menu">
             <ul>
                 <li class="topmenu">
-                    <a  href="home.html">Home</a>
-                    
+                    <a href="../index.html">Home</a>
+
                 </li>
                 <li class="topmenu">
                     <a style="color: #83c0c1" href="reiseziele.html">Reiseziele</a>
                     <ul>
-                        <li class="submenu"><a href="malediven.html">Maledieven</a></li>
-                        <li class="submenu"><a href="thailand.html">Thailand</a></li>
+                        <li class="submenu"><a href="karibik.html">Karibik</a></li>
+                        <li class="submenu"><a href="madagaska.html">Madagaska</a></li>
                         <li class="submenu"><a href="nepal.html">Nepal</a></li>
                     </ul>
                 </li>
@@ -64,54 +63,108 @@
         </div>
     </header>
 
-<div id="space" style="height:70px"></div>
+    <div id="space" style="height:70px"></div>
 
-        <!-- Header Ende -->
+    <!-- Header Ende -->
+    <div id="alles">
+        <div id="contentall">
 
-        <h1>Deine Reiseziele</h1>
+            <h1>Deine Reiseziele</h1>
 
-        <div class="kunden">
-            <div id="polaroids" style="padding-left:200px">
-                <img id ="wackeln"
-                onmouseover="mOver(this)" onmouseout="mOut(this)" 
-                src="../images/polaroid/polaroid_nepal.png" width="230px" height="">
-                <button type="button" class="buttonKlein">mehr Infos</button>
-           </div>
-            <div id="polaroids">
-                <img id="wackeln"
-                onmouseover="mOver(this)" onmouseout="mOut(this)" 
-                src="../images/polaroid/polaroid_malediven.png" width="230px" height="">
-                <button type="button" class="buttonKlein">mehr Infos</button>
-           </div>
-            <div id="polaroids">
-                <img id="wackeln"
-                onmouseover="mOver(this)" onmouseout="mOut(this)" 
-                src="../images/polaroid/polaroid_thailand.png" width="230px" height="">
-                <button type="button" class="buttonKlein">mehr Infos</button>
-           </div>
+            <hr>
+
+            <div class="kunden">
+                <div id="polaroids" style="padding-left:200px">
+                    <img id="wackeln" onmouseover="mOver(this)" onmouseout="mOut(this)"
+                        src="../images/polaroid/polaroid_karibik.png" width="230px" height="">
+                    <button type="button" class="buttonKlein">mehr Infos</button>
+                </div>
+                <div id="polaroids">
+                    <img id="wackeln" onmouseover="mOver(this)" onmouseout="mOut(this)"
+                        src="../images/polaroid/polaroid_madagaska.png" width="230px" height="">
+                    <button type="button" class="buttonKlein">mehr Infos</button>
+                </div>
+                <div id="polaroids">
+                    <img id="wackeln" onmouseover="mOver(this)" onmouseout="mOut(this)"
+                        src="../images/polaroid/polaroid_nepal.png" width="230px" height="">
+                    <button type="button" class="buttonKlein">mehr Infos</button>
+                </div>
+            </div>
+
+
+
+            <!-- Wähle deine Zielorte -->
+
+            <h2>Wähle deine Zielorte</h2>
+
+            <hr>
+            <div class="box">
+
+                <canvas id="canvas" width="780" height="398"></canvas>
+            </div>
+
+
+
+            <!-- Footer Start -->
+
+            <div class="footer">
+                <div class="footer_content">
+                    <div class="section">
+                        <p></p>
+                    </div>
+                    <div class="section">
+                        <h3> Zur Buchung</h3>
+                        <button type="button" class="buttonKlein">let's book!</button>
+
+                    </div>
+                    <div class="section">
+                        <h3>Links</h3>
+                        <i class="fas fa-check" style="color: #83c0c1"></i>
+                        <a href="../index.html">Home</a> <br>
+                        <i class="fas fa-check" style="color: #83c0c1"></i>
+                        <a href="team.html">Team</a> <br>
+                        <i class="fas fa-check" style="color: #83c0c1"></i>
+                        <a href="impressum.html">Impressum</a> <br>
+                        <i class="fas fa-check" style="color: #83c0c1"></i>
+                        <a href="datenschutz.html">Datenschutz</a> <br>
+                    </div>
+                    <div class="section">
+                        <h3>Kontakt</h3>
+                        <i class="fab fa-facebook-f" style="color: #83c0c1"></i>
+                        <a href="#">polaroid_travel</a><br>
+                        <i class="fab fa-instagram" style="color: #83c0c1"></i>
+                        <a href="#">polaroid_travel</a> <br>
+                        <i class="fas fa-phone" style="color: #83c0c1"></i>
+                        <a href="#">015255426826</a> <br>
+                        <i class="far fa-envelope" style="color: #83c0c1"></i>
+                        <a href="#">kontakt@plaroid-travel.de</a> <br>
+                    </div>
+
+                    <div class="section">
+                        <h2 style="color: #83c0c1">Polaroid Travel</h2>
+                    </div>
+                    <div class="section">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="unten">
+                    <div class="footer_bottom">
+                        <p>&copy; Polaroid Travel - Designed by Lorina und Lisa</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-
-
-    <!-- Wähle deine Zielorte -->
-        
-    <h2>Wähle deine Zielorte</h2>
-
-    <hr>
-    <div class="box">
-
-        <canvas id="canvas" width="780" height="398"></canvas>
-        <!-- In das Canvas Feld soll dann der Code aud dem Ordner "Test/nichtFliegendesFlugzeug" -->
-        <!-- und das Flugzeug soll iwann hoffentlich auch noch im Kreis
-        (also auf dieser Linie) fliegen -->
-
-        
     </div>
 
-<script type="text/javascript" src="../js/style.js">
+    <script type="text/javascript" src="../js/style.js"></script>
 
-</script>
-   
+
+    <script type="text/javascript" src="../js/style_canvas.js"></script>
+
+
+
 </body>
 
 </html>
